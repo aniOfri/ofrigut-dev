@@ -1,0 +1,29 @@
+.App {
+  margin-top:10vh;
+  text-align: center;
+}
+
+div.EarTrainer{
+  position:absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(../../Assets/NoteBackground.png);
+  background-size:unset;
+  width: 100%;
+  height:100%;
+}
+
+img.navigator{
+  margin: 10px 0 0 10px;
+  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  position: absolute;
+  left:0;
+  top:0;
+  height: 3vh;
+  width: 3vh;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+}

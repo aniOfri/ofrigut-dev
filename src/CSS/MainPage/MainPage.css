@@ -1,14 +1,22 @@
 .App {
-  background-image:linear-gradient(rgba(247, 130, 227, 0.6), rgba(109, 0, 27, 0.822));
   position:absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
+  background-color: #929292;
+  opacity: 1;
+  background: linear-gradient(135deg, #38383855 25%, transparent 25%) -36px 0/ 72px 72px, linear-gradient(225deg, #383838 25%, transparent 25%) -36px 0/ 72px 72px, linear-gradient(315deg, #38383855 25%, transparent 25%) 0px 0/ 72px 72px, linear-gradient(45deg, #383838 25%, #929292 25%) 0px 0/ 72px 72px;
 }
 
 h1.mainTitle{
+  color: #494949;
+  text-shadow:
+   -2px -2px 0 #ffffff, 
+    2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+     2px 2px 0 #ffffff;
   margin-top: 10vh;
   margin-left:auto;
   margin-right:auto;
@@ -17,7 +25,7 @@ h1.mainTitle{
 
 h3.serviceTitle {
   align-items: center;
-  color: #e4e4e4;
+  color: #494949;
   display: flex;
   fill: currentcolor;
   font-family: Roboto;
@@ -41,7 +49,7 @@ h3.serviceTitle {
   margin-left:auto;
   margin-right:auto;
   margin-top: 10vh;
-  width: 50%;
+  width: fit-content
 }
 
 .Service{
@@ -52,7 +60,7 @@ h3.serviceTitle {
   margin: auto;
   margin-top: 1vh;
   border-radius: 20px;
-  border: black 2px solid;
+  border: #494949 4px solid;
 }
 
 .Service h3 {
@@ -60,8 +68,7 @@ h3.serviceTitle {
 }
 
 div#EarTrainer{
-  background-color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../../Assets/NoteBackground.png);
+  background-color: rgb(182, 182, 182);
   background-size:cover;
 }
 
@@ -71,7 +78,7 @@ div#EarTrainer h3{
 }
 
 div#Settlements{
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../../Assets/SettlementsBackground.png) center ;
+  background-color: rgb(182, 182, 182);
   background-size: cover;
 }
 

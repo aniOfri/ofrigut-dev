@@ -14,11 +14,11 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: "/EarTraining",
+    path: "/eartraining",
     element: <EarTrainer />,
   },
   {
-    path: "/Settlements",
+    path: "/settlements",
     element: <Settlements />,
   },
   {

@@ -171,6 +171,9 @@ function Game(props: any) {
         setPause(false);
         updateLastSettlements(settlements[0][0]);
         if (!correct && health-1 === 0) {
+            if (streak > parseInt(props.cookies["Highscore"])) {
+                document.cookie = "Highscore=" + streak;
+            }
             setPairs([]);
             props.setMenu(true);
             setStreak(0);
@@ -190,12 +193,6 @@ function Game(props: any) {
         if (correct) {
             indicator = "success"
             answer = "correct answer!"
-        }
-
-        if (indicator === "fail") {
-            if (streak > parseInt(props.cookies["Highscore"])) {
-                document.cookie = "Highscore=" + streak;
-            }
         }
 
         const isMobile = props.width <= 520 && props.width < (props.height-200);

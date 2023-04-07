@@ -1,8 +1,21 @@
 .App {
+  background-image:linear-gradient(rgba(247, 130, 227, 0.6), rgba(109, 0, 27, 0.822));
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
-h3 {
+h1.mainTitle{
+  margin-top: 10vh;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+}
+
+h3.serviceTitle {
   align-items: center;
   color: #e4e4e4;
   display: flex;
@@ -25,26 +38,44 @@ h3 {
 }
 
 .Services{
+  margin-left:auto;
+  margin-right:auto;
   margin-top: 10vh;
+  width: 50%;
 }
 
 .Service{
+  margin-bottom:10vh;
   cursor: pointer;
   line-height: 5vh;
   text-align: center;
   margin: auto;
+  margin-top: 1vh;
   border-radius: 20px;
   border: black 2px solid;
-  width: 50vh;
-  height:20vh;
+}
+
+.Service h3 {
+  font-weight: bold;
 }
 
 div#EarTrainer{
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../../Assets/NoteBackground.png);
+  background-color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../../Assets/NoteBackground.png);
   background-size:cover;
 }
 
 div#EarTrainer h3{
+  padding: 2px 8px 2px 8px;
+  width:fit-content;
+}
+
+div#Settlements{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../../Assets/SettlementsBackground.png) center ;
+  background-size: cover;
+}
+
+div#Settlements h3{
   padding: 2px 8px 2px 8px;
   width:fit-content;
 }

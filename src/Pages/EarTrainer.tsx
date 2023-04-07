@@ -69,7 +69,7 @@ export default function EarTrainer() {
 
   return (
     <div className="EarTrainer">
-      <div className="App">
+      <div className="earTrainerApp">
         <img
           alt=""
           className="navigator"

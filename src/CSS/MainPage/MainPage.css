@@ -44,7 +44,7 @@ h3.serviceTitle {
   color: #383838;
   fill: currentcolor;
   font-family: Roboto;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
   justify-content: center;
   letter-spacing: .25px;
   max-width: fit-content;
@@ -60,10 +60,9 @@ h3.serviceTitle {
 h3.serviceSubtitle{
   align-items: center;
   color: #383838;
-  display: flex;
   fill: currentcolor;
   font-family: Roboto;
-  font-size: 2vh;
+  font-size: 2vmin;
   font-weight: lighter;
   justify-content: center;
   letter-spacing: .25px;
@@ -75,24 +74,22 @@ h3.serviceSubtitle{
 }
 
 .Services{
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-left:auto;
-  margin-right:auto;
-  width: 75vh;
+  display:flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
 }
 
 .Service{
   background-color: #adadad;
-  margin-bottom:10vh;
   cursor: pointer;
   line-height: 5vmin;
   text-align: center;
-  margin: auto;
-  margin-top: 1vh;
   border-radius: 20px;
   border: #494949 4px solid;
+  margin-top: 1vh;
+  margin-right:0;
+  margin-left: 0;
 }
 
 .Service h3.mainTitle {

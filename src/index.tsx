@@ -6,6 +6,7 @@ import MainPage from "./Pages/MainPage";
 import EarTrainer from "./Pages/EarTrainer";
 import NotFound from "./Pages/NotFound";
 import Settlements from "./Pages/SettlementsApp";
+import Countries from "./Pages/CountriesApp";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/settlements",
     element: <Settlements />,
+  },
+  {
+    path: "/countries",
+    element: <Countries />,
   },
   {
     path: "*",

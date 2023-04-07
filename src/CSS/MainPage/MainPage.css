@@ -11,6 +11,7 @@
 }
 
 h1.mainTitle{
+  font-size: 5vh;
   color: #494949;
   text-shadow:
    -2px -2px 0 #ffffff, 
@@ -20,42 +21,73 @@ h1.mainTitle{
   margin-top: 10vh;
   margin-left:auto;
   margin-right:auto;
-  width: 50%;
+  width: fit-content ;
+}
+
+h2.mainSubtitle{
+  font-size: 2.5vh;
+  color: #494949;
+  text-shadow:
+   -2px -2px 0 #ffffff, 
+    2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+     2px 2px 0 #ffffff;
+  margin-top: 3vh;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 2vh;
+  width: fit-content;
 }
 
 h3.serviceTitle {
   align-items: center;
-  color: #494949;
-  display: flex;
+  color: #383838;
   fill: currentcolor;
   font-family: Roboto;
-  font-size: 3vh;
-  font-weight: lighter;
+  font-size: 2vmin;
   justify-content: center;
   letter-spacing: .25px;
   max-width: fit-content;
-  padding: 1px 15px;
   position: relative;
   text-align: center;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
   width: auto;
   margin: auto;
   margin-top: 3vh;
-  margin-bottom: 2.5vh;
-  padding: 10px 10px 10px 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h3.serviceSubtitle{
+  align-items: center;
+  color: #383838;
+  display: flex;
+  fill: currentcolor;
+  font-family: Roboto;
+  font-size: 2vh;
+  font-weight: lighter;
+  justify-content: center;
+  letter-spacing: .25px;
+  width: fit-content;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  margin: -20px auto 0 auto;
 }
 
 .Services{
+  display: flex;
+  flex-wrap: wrap;
+
   margin-left:auto;
   margin-right:auto;
-  margin-top: 10vh;
-  width: fit-content
+  width: 75vh;
 }
 
 .Service{
+  background-color: #adadad;
   margin-bottom:10vh;
   cursor: pointer;
-  line-height: 5vh;
+  line-height: 5vmin;
   text-align: center;
   margin: auto;
   margin-top: 1vh;
@@ -63,26 +95,6 @@ h3.serviceTitle {
   border: #494949 4px solid;
 }
 
-.Service h3 {
+.Service h3.mainTitle {
   font-weight: bold;
-}
-
-div#EarTrainer{
-  background-color: rgb(182, 182, 182);
-  background-size:cover;
-}
-
-div#EarTrainer h3{
-  padding: 2px 8px 2px 8px;
-  width:fit-content;
-}
-
-div#Settlements{
-  background-color: rgb(182, 182, 182);
-  background-size: cover;
-}
-
-div#Settlements h3{
-  padding: 2px 8px 2px 8px;
-  width:fit-content;
 }

@@ -1,11 +1,16 @@
 import "../CSS/EarTrainer/EarTrainer.css";
 import Soundplayer from "./EarTrainer/Soundplayer";
 import Settings from "./EarTrainer/Settings";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import Gear from "../Assets/Settings.svg";
 import Arrow from "../Assets/Arrow.png";
 
 export default function EarTrainer() {
+
+  useEffect(() =>{
+    document.title = "ofrigut.dev | ear training"
+  });
+
   const [variety, setVariety] = useState(3);
   const [instrument, setInstrument] = useState("0");
   const [showTone, setShowTone] = useState(false);

@@ -5,6 +5,8 @@ import "./index.css";
 import MainPage from "./Pages/MainPage";
 import EarTrainer from "./Pages/EarTrainer";
 import NotFound from "./Pages/NotFound";
+import Settlements from "./Pages/SettlementsApp";
+
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/EarTraining",
     element: <EarTrainer />,
+  },
+  {
+    path: "/Settlements",
+    element: <Settlements />,
   },
   {
     path: "*",

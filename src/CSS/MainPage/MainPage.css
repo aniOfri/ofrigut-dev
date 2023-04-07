@@ -1,3 +1,50 @@
 .App {
   text-align: center;
 }
+
+h3 {
+  align-items: center;
+  color: #e4e4e4;
+  display: flex;
+  fill: currentcolor;
+  font-family: Roboto;
+  font-size: 3vh;
+  font-weight: lighter;
+  justify-content: center;
+  letter-spacing: .25px;
+  max-width: fit-content;
+  padding: 1px 15px;
+  position: relative;
+  text-align: center;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+  width: auto;
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 2.5vh;
+  padding: 10px 10px 10px 10px;
+}
+
+.Services{
+  margin-top: 10vh;
+}
+
+.Service{
+  cursor: pointer;
+  line-height: 5vh;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  border: black 2px solid;
+  width: 50vh;
+  height:20vh;
+}
+
+div#EarTrainer{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../../Assets/NoteBackground.png);
+  background-size:cover;
+}
+
+div#EarTrainer h3{
+  padding: 2px 8px 2px 8px;
+  width:fit-content;
+}

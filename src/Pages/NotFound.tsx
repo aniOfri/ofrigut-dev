@@ -8,9 +8,6 @@ export default function NotFound() {
       <h1 className="link">
         <Link to="/">Home</Link>
       </h1>
-      <h1 className="link">
-        <Link to="/EarTraining">Hebrew Ear Trainer</Link>
-      </h1>
     </div>
   );
 }

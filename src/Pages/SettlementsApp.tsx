@@ -11,6 +11,10 @@ import { useEffect, useState } from 'react'
 import { checkCookies, createCookies } from './Settlements/modules/Cookies';
 
 export default function Settlements() {
+  useEffect(() =>{
+    document.title = "ofrigut.dev | settlements"
+  });
+
   if (checkCookies())
     createCookies();
 

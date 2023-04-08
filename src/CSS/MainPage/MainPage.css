@@ -5,10 +5,13 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #929292;
-  opacity: 1;
-  background: linear-gradient(135deg, #38383855 25%, transparent 25%) -36px 0/ 72px 72px, linear-gradient(225deg, #383838 25%, transparent 25%) -36px 0/ 72px 72px, linear-gradient(315deg, #38383855 25%, transparent 25%) 0px 0/ 72px 72px, linear-gradient(45deg, #383838 25%, #929292 25%) 0px 0/ 72px 72px;
+  opacity: 0.6;
+  background-size: 48px 84px;
+  background-position: 0 0, 0 0, 24px 42px, 24px 42px, 0 0, 24px 42px;
+  background-image:  linear-gradient(30deg, #383838 12%, transparent 12.5%, transparent 87%, #383838 87.5%, #383838), linear-gradient(150deg, #383838 12%, transparent 12.5%, transparent 87%, #383838 87.5%, #383838), linear-gradient(30deg, #383838 12%, transparent 12.5%, transparent 87%, #383838 87.5%, #383838), linear-gradient(150deg, #383838 12%, transparent 12.5%, transparent 87%, #383838 87.5%, #383838), linear-gradient(60deg, #38383877 25%, transparent 25.5%, transparent 75%, #38383877 75%, #38383877), linear-gradient(60deg, #38383877 25%, transparent 25.5%, transparent 75%, #38383877 75%, #38383877), linear-gradient(181deg, #b6bbfb 0%, rgba(217, 46, 116, 0) 100%);
 }
+
+
 
 h1.mainTitle{
   font-size: 5vh;
@@ -44,33 +47,31 @@ h3.serviceTitle {
   color: #383838;
   fill: currentcolor;
   font-family: Roboto;
-  font-size: 2.5vmin;
+  font-size: 4vmin;
   justify-content: center;
   letter-spacing: .25px;
   max-width: fit-content;
   position: relative;
   text-align: center;
   width: auto;
-  margin: auto;
-  margin-top: 3vh;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin: 20px auto auto auto;
+  padding: 0 10px 0 10px;
 }
 
-h3.serviceSubtitle{
+.serviceSubtitle{
+  margin: 10px 0 10px 0;
+}
+
+.serviceSubtitle h3{
   align-items: center;
   color: #383838;
   fill: currentcolor;
   font-family: Roboto;
-  font-size: 2vmin;
+  font-size: 2vh;
   font-weight: lighter;
-  justify-content: center;
   letter-spacing: .25px;
   width: fit-content;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-  margin: -20px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .Services{
@@ -78,10 +79,9 @@ h3.serviceSubtitle{
   margin: auto;
 }
 
-.Service div{
-  background-color: #adadad;
+.Service div.ServiceWrapper{
+  background-color: #eaebff;
   cursor: pointer;
-  line-height: 5.5vmin;
   text-align: center;
   border-radius: 20px;
   border: #494949 4px solid;

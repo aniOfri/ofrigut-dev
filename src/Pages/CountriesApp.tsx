@@ -30,10 +30,10 @@ function Countries() {
       }
     }, {})
 
-  const [timerEnabled, setTimerEnabled] = useState(COOKIES["Timer"]);
-  const [showInfo, setShowInfo] = useState(COOKIES["ShowInfo"]);
-  const [isHealth, setIsHealth] = useState(COOKIES["Health"]);
-  const [minPop, setMinPop] = useState(parseInt(COOKIES["MinPop"]));
+  const [timerEnabled, setTimerEnabled] = useState(COOKIES["Timer" as keyof typeof COOKIES]);
+  const [showInfo, setShowInfo] = useState(COOKIES["ShowInfo" as keyof typeof COOKIES]);
+  const [isHealth, setIsHealth] = useState(COOKIES["Health" as keyof typeof COOKIES]);
+  const [minPop, setMinPop] = useState(parseInt(COOKIES["MinPop" as keyof typeof COOKIES]));
   const [isActive, setIsActive] = useState(false);
   const [menu, setMenu] = useState(true);
   

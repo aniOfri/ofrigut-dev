@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {RandInt} from '../modules/Calculators';
 
 
@@ -60,7 +60,7 @@ class Globe{
 }
 
 function FallingObject(props: any){
-    const [objects, setObjects] = useState(createObjects())
+    const objects = useRef(createObjects())
     const [foo, setFoo] = useState(false);
 
 
@@ -75,8 +75,8 @@ function FallingObject(props: any){
 
     function handleSizeChange(){
         for (let i = 0; i < 40; i++){
-            objects[i].posX = 0
-            objects[i].lifeSpan = objects[i].maxLifeSpan - 1;
+            objects.current[i].posX = 0
+            objects.current[i].lifeSpan = objects.current[i].maxLifeSpan - 1;
         }
     }
     
@@ -94,7 +94,7 @@ function FallingObject(props: any){
 
         interval = setInterval(() => {
             for (let i = 0; i < 40; i++){
-                objects[i].move(props.width, props.height);
+                objects.current[i].move(props.width, props.height);
             }
             
             setFoo(!foo);
@@ -107,7 +107,7 @@ function FallingObject(props: any){
 
     let flags = [];
     for (let i = 0; i < 40; i++){
-        flags.push(objects[i].getGlobe())
+        flags.push(objects.current[i].getGlobe())
     }
 
     return (

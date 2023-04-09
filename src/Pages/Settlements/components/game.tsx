@@ -46,7 +46,7 @@ function Game(props: any) {
         if (props.timerEnabled || props.isMultiplayer){
             let interval = null as any;
 
-            if (props.isActive) {
+            if (isActive) {
                 interval = setInterval(() => {
                     setTime((time) => time + 10);
                     if (time >= 9990){

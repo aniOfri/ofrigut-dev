@@ -1,24 +1,24 @@
 import { RandInt } from './Calculators';
-import SettlementsList from '../data/countries.json';
+import CountriesList from '../data/countries.json';
 
 // CHECK THAT THERE IS NO DUPLICATES IN THE SET
-function Duplicates(setts: any, j: number) {
+function Duplicates(countries: any, j: number) {
   let duplicate = false;
   for (let i = 1; i < j; i++) {
-    if (setts[i] === setts[j]) duplicate = true;
+    if (countries[i] === countries[j]) duplicate = true;
   }
 
   return duplicate;
 }
 
 // CHECK THAT NO COUNTRIES APPEARED IN THE LAST ROUND
-function Unfresh(sett: any, lastRound: any) {
+function Unfresh(country: any, lastRound: any) {
   if (lastRound[0] == null)
     return false;
   else {
     let refreshed = false;
     for (let i = 0; i < lastRound.length; i++) {
-      if (sett === lastRound[i]) refreshed = true;
+      if (country === lastRound[i]) refreshed = true;
     }
 
     return refreshed;
@@ -31,12 +31,12 @@ function getCity(list: any[]) {
 }
 
 // GET A LIST OF RANDOM COUNTRIES AND A PAIR OF CLOSE ONES
-function GetSettlement(lastRound: any, score: number, lastSetts: any, minPop:number, pairsList:any) {
+function GetCountry(lastRound: any, score: number, lastcountries: any, minPop:number, pairsList:any) {
   const minDist = 4 + score / 1000;
   const maxDist = 6 + score / 1000;
-  const list = SettlementsList;
+  const list = CountriesList;
 
-  let setts = [], mostClosest, longt1, longt2, lat1, lat2;
+  let countries = [], mostClosest, longt1, longt2, lat1, lat2;
 
   if (score > 50)
     score = 50;
@@ -46,37 +46,37 @@ function GetSettlement(lastRound: any, score: number, lastSetts: any, minPop:num
   if (pop < minPop) pop = minPop;
 
   do {
-    setts[0] = getCity(list);
+    countries[0] = getCity(list);
   }
-  while (setts[0].population < pop || Unfresh(setts[0], lastRound) || Unfresh(setts[0], lastSetts))
+  while (countries[0].population < pop || Unfresh(countries[0], lastRound) || Unfresh(countries[0], lastcountries))
 
   for (let j = 1; j < 7; j++) {
     do {
       do {
-        setts[j] = getCity(list);
+        countries[j] = getCity(list);
       }
-      while (setts[j].population < 50000 - toSubstract || Duplicates(setts, j) || Unfresh(setts[j], lastRound))
+      while (countries[j].population < 50000 - toSubstract || Duplicates(countries, j) || Unfresh(countries[j], lastRound))
 
-      longt1 = setts[0].gps.split(" ")[1].replace(")", "");
-      longt2 = setts[j].gps.split(" ")[1].replace(")", "");
+      longt1 = countries[0].gps.split(" ")[1].replace(")", "");
+      longt2 = countries[j].gps.split(" ")[1].replace(")", "");
 
-      lat1 = setts[0].gps.split("(")[1].split(" ")[0];
-      lat2 = setts[j].gps.split("(")[1].split(" ")[0];
+      lat1 = countries[0].gps.split("(")[1].split(" ")[0];
+      lat2 = countries[j].gps.split("(")[1].split(" ")[0];
 
     }
     while (Math.abs(longt1 - longt2) < maxDist || Math.abs(lat1 - lat2) < maxDist)
   }
 
-  mostClosest = getClosest(setts[0], list, minDist, score, pairsList);
+  mostClosest = getClosest(countries[0], list, minDist, score, pairsList);
 
   let index;
-  index = setts.indexOf(mostClosest);
+  index = countries.indexOf(mostClosest);
   if (index === -1) {
     index = RandInt(4) + 1
-    setts[index] = mostClosest;
+    countries[index] = mostClosest;
   }
 
-  return [setts, index];
+  return [countries, index];
 }
 
 // CHECK IF CLOSEST COUNTRY ISNT IN LIST OF PAIRS
@@ -102,7 +102,7 @@ function createEmpty(){
   return arr;
 }
 
-// GET CLOSEST COUNTRY TO GIVEN SETTLEMENT
+// GET CLOSEST COUNTRY TO GIVEN Country
 function getClosest(dest:any, list:any, minDist = 0.04, score = 0, pairsList = []) {
   let closest, mostClosest, mostClosestLongt = minDist, mostClosestLat = minDist;
   let longt1, longt2, lat1, lat2;
@@ -149,4 +149,4 @@ function getClosest(dest:any, list:any, minDist = 0.04, score = 0, pairsList = [
 
 
 
-export { GetSettlement, getClosest, createEmpty };
+export { GetCountry, getClosest, createEmpty };

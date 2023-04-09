@@ -11,7 +11,7 @@ import { useReward } from 'react-rewards';
 function Game(props: any) {
     // Meta game related states
     const isActive = props.isActive;
-    const [streak, setStreak] = useState(parseInt(props.cookies["Score"]));
+    const [streak, setStreak] = useState(parseInt(props.cookies["ScoreSettlements"]));
     const [time, setTime] = useState(0);
     const [health, setHealth] = useState(props.isHealth ? 3 : 1);
         
@@ -172,13 +172,13 @@ function Game(props: any) {
         setPause(false);
         updateLastSettlements(settlements[0][0]);
         if (!correct && health-1 === 0) {
-            if (streak > parseInt(props.cookies["Highscore"])) {
-                document.cookie = "Highscore=" + streak;
+            if (streak > parseInt(props.cookies["HighscoreSettlements"])) {
+                document.cookie = "HighscoreSettlements=" + streak;
             }
             setPairs([]);
             props.setMenu(true);
             setStreak(0);
-            document.cookie = "Score=0";
+            document.cookie = "ScoreSettlements=0";
             setCorrect(true);
         }
         else if (!correct)
@@ -186,7 +186,7 @@ function Game(props: any) {
     }
 
     let jsx;
-    document.cookie = "Score=" + streak;
+    document.cookie = "ScoreSettlements=" + streak;
     if (pause) {
         let sentence = Sentence(settlements[0][0], settlements[0][settlements[1]]);
 
@@ -216,7 +216,7 @@ function Game(props: any) {
         jsx = (
             <div onClick={() => { nextRound() }}>
                 <div className="streak">
-                    <p>הניקוד הכי גבוה: {parseInt(props.cookies["Highscore"])}</p>
+                    <p>הניקוד הכי גבוה: {parseInt(props.cookies["HighscoreSettlements"])}</p>
                     <p>ניקוד: {streak}</p>
                 </div>
                 <div className='wrapperPause center'>
@@ -242,7 +242,7 @@ function Game(props: any) {
 
         jsx = (<div>
             <div className="streak">
-                <p>הניקוד הכי גבוה: {parseInt(props.cookies["Highscore"])}</p>
+                <p>הניקוד הכי גבוה: {parseInt(props.cookies["HighscoreSettlements"])}</p>
                 <p>ניקוד: {streak}</p>
             </div>
             {timerHTML(props.timerEnabled, time)}

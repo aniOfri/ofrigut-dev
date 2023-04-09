@@ -5,12 +5,12 @@ import heart from '../data/heart.png';
 // Modules
 import { useState, useEffect } from 'react'
 import { calcCrow, timerHTML } from '../modules/Calculators';
-import { GetSettlement } from '../modules/Settlements'
+import { GetCountry } from '../modules/Countries'
 import { useReward } from 'react-rewards';
 
 function Game(props: any) {
     // Meta game related states
-    const [streak, setStreak] = useState(parseInt(props.cookies["Score"]));
+    const [streak, setStreak] = useState(parseInt(props.cookies["ScoreCountries"]));
     const [time, setTime] = useState(0);
     const [health, setHealth] = useState(props.isHealth ? 3 : 1);
         
@@ -18,7 +18,7 @@ function Game(props: any) {
     const [pause, setPause] = useState(false);
     const [pairs, setPairs] = useState([]);
     const [lastSettlements, setLastSetts] = useState([null]);
-    const [settlements, setSettlements] = useState(GetSettlement([null], streak, lastSettlements, props.minPop, pairs) as any[]);
+    const [settlements, setSettlements] = useState(GetCountry([null], streak, lastSettlements, props.minPop, pairs) as any[]);
     const [choice, setChoice] = useState(0);
     const [correct, setCorrect] = useState(true);
 
@@ -167,17 +167,17 @@ function Game(props: any) {
         setTime(0);
         props.setIsActive(true);
         addToPairs();
-        setSettlements(GetSettlement(settlements[0], streak, lastSettlements, props.minPop, pairs))
+        setSettlements(GetCountry(settlements[0], streak, lastSettlements, props.minPop, pairs))
         setPause(false);
         updateLastSettlements(settlements[0][0]);
         if (!correct && health-1 === 0) {
-            if (streak > parseInt(props.cookies["Highscore"])) {
-                document.cookie = "Highscore=" + streak;
+            if (streak > parseInt(props.cookies["HighscoreCountries"])) {
+                document.cookie = "HighscoreCountries=" + streak;
             }
             setPairs([]);
             props.setMenu(true);
             setStreak(0);
-            document.cookie = "Score=0";
+            document.cookie = "ScoreCountries=0";
             setCorrect(true);
         }
         else if (!correct)
@@ -185,7 +185,7 @@ function Game(props: any) {
     }
 
     let jsx;
-    document.cookie = "Score=" + streak;
+    document.cookie = "ScoreCountries=" + streak;
     if (pause) {
         let sentence = Sentence(settlements[0][0], settlements[0][settlements[1]]);
 
@@ -215,7 +215,7 @@ function Game(props: any) {
         jsx = (
             <div onClick={() => { nextRound() }}>
                 <div className="streak">
-                    <p>Highscore: {parseInt(props.cookies["Highscore"])}</p>
+                    <p>Highscore: {parseInt(props.cookies["HighscoreCountries"])}</p>
                     <p>Score: {streak}</p>
                 </div>
                 <div className='wrapperPause center'>
@@ -241,7 +241,7 @@ function Game(props: any) {
 
         jsx = (<div>
             <div className="streak">
-                <p>Highscore: {parseInt(props.cookies["Highscore"])}</p>
+                <p>Highscore: {parseInt(props.cookies["HighscoreCountries"])}</p>
                 <p>Score: {streak}</p>
             </div>
             {timerHTML(props.timerEnabled || props.isMultiplayer, time)}

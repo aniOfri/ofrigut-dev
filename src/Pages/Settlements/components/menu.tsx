@@ -12,23 +12,23 @@ import { useState } from 'react'
 function Settings(props: any) {
     function handleMinPop(e: any) {
         props.setMinPop(e.target.value);
-        document.cookie = "MinPop=" + props.minPop;
+        document.cookie = "MinPopSettlements=" + props.minPop;
     }
 
     function handleTimer(e: any) {
         props.setTimerEnabled(e);
-        document.cookie = "Score=0";
-        document.cookie = "Timer=" + props.timerEnabled;
+        document.cookie = "ScoreSettlements=0";
+        document.cookie = "TimerSettlements=" + props.timerEnabled;
     }
 
     function handleInfo(e: any) {
         props.setShowInfo(e);
-        document.cookie = "ShowInfo=" + props.showInfo;
+        document.cookie = "ShowInfoSettlements=" + props.showInfo;
     }
 
     function handleHealth(e: any) {
         props.setIsHealth(e);
-        document.cookie = "Health=" + props.isHealth;
+        document.cookie = "HealthSettlements=" + props.isHealth;
     }
 
     return (
@@ -77,17 +77,17 @@ function Menu(props: any) {
     const [settings, setSettings] = useState(false);
 
     if (settings) {
-        document.cookie = "MinPop=" + props.minPop;
-        document.cookie = "Timer=" + props.timerEnabled;
-        document.cookie = "ShowInfo=" + props.showInfo;
-        document.cookie = "Health=" + props.isHealth;
+        document.cookie = "MinPopSettlements=" + props.minPop;
+        document.cookie = "TimerSettlements=" + props.timerEnabled;
+        document.cookie = "ShowInfoSettlements=" + props.showInfo;
+        document.cookie = "HealthSettlements=" + props.isHealth;
 
         return <Settings isHealth={props.isHealth} setIsHealth={props.setIsHealth} setShowInfo={props.setShowInfo} showInfo={props.showInfo} setMinPop={props.setMinPop} minPop={props.minPop} setTimerEnabled={props.setTimerEnabled} timerEnabled={props.timerEnabled} setSettings={setSettings} settings={settings} />
     }
     else {
         let mode = "משחק לבד";
-        if (props.cookies["streak"] > 0)
-            mode = "המשך משחק לבד (ניקוד: " + props.cookies["streak"] + ")";
+        if (props.cookies["streakSettlements"] > 0)
+            mode = "המשך משחק לבד (ניקוד: " + props.cookies["streakSettlements"] + ")";
 
             return (
                 <div>

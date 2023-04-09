@@ -12,23 +12,23 @@ import { useState } from 'react'
 function Settings(props: any) {
     function handleMinPop(e: any) {
         props.setMinPop(e.target.value);
-        document.cookie = "MinPop=" + props.minPop;
+        document.cookie = "MinPopCountries=" + props.minPop;
     }
 
     function handleTimer(e: any) {
         props.setTimerEnabled(e);
-        document.cookie = "Score=0";
-        document.cookie = "Timer=" + props.timerEnabled;
+        document.cookie = "ScoreCountries=0";
+        document.cookie = "TimerCountries=" + props.timerEnabled;
     }
 
     function handleInfo(e: any) {
         props.setShowInfo(e);
-        document.cookie = "ShowInfo=" + props.showInfo;
+        document.cookie = "ShowInfoCountries=" + props.showInfo;
     }
 
     function handleHealth(e: any) {
         props.setIsHealth(e);
-        document.cookie = "Health=" + props.isHealth;
+        document.cookie = "HealthCountries=" + props.isHealth;
     }
 
     return (
@@ -76,17 +76,17 @@ function Menu(props: any) {
     const [settings, setSettings] = useState(false);
 
     if (settings) {
-        document.cookie = "MinPop=" + props.minPop;
-        document.cookie = "Timer=" + props.timerEnabled;
-        document.cookie = "ShowInfo=" + props.showInfo;
-        document.cookie = "Health=" + props.isHealth;
+        document.cookie = "MinPopCountries=" + props.minPop;
+        document.cookie = "TimerCountries=" + props.timerEnabled;
+        document.cookie = "ShowInfoCountries=" + props.showInfo;
+        document.cookie = "HealthCountries=" + props.isHealth;
 
         return <Settings isHealth={props.isHealth} setIsHealth={props.setIsHealth} setShowInfo={props.setShowInfo} showInfo={props.showInfo} setMinPop={props.setMinPop} minPop={props.minPop} setTimerEnabled={props.setTimerEnabled} timerEnabled={props.timerEnabled} setSettings={setSettings} settings={settings} />
     }
     else {
         let mode = "Start Playing";
-        if (props.cookies["streak"] > 0)
-            mode = "Continue Playing (" + props.cookies["streak"] + ")";
+        if (props.cookies["streakCountries"] > 0)
+            mode = "Continue Playing (" + props.cookies["streakCountries"] + ")";
 
         return (
             <div>

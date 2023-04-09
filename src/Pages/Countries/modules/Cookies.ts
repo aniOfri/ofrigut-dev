@@ -1,16 +1,16 @@
 function checkCookies() {
-    const COOKIES = ["Score", "Highscore", "MinPop", "Timer", "ShowInfo", "Health"];
+    const COOKIES = ["ScoreCountries", "HighscoreCountries", "MinPopCountries", "TimerCountries", "ShowInfoCountries", "HealthCountries"];
 
     return COOKIES.some(v => !document.cookie.includes(v));
 }
 
 function createCookies() {
-    document.cookie = "Score=0";
-    document.cookie = "Highscore=0";
-    document.cookie = "Timer=false";
-    document.cookie = "MinPop=0";
-    document.cookie = "ShowInfo=true";
-    document.cookie = "Health=true";
+    document.cookie = "ScoreCountries=0";
+    document.cookie = "HighscoreCountries=0";
+    document.cookie = "TimerCountries=false";
+    document.cookie = "MinPopCountries=0";
+    document.cookie = "ShowInfoCountries=true";
+    document.cookie = "HealthCountries=true";
 }
 
 export { checkCookies, createCookies };

@@ -1,4 +1,4 @@
-.App {
+.MainPage {
   position:absolute;
   top: 0;
   left: 0;
@@ -53,7 +53,7 @@ h3.serviceTitle {
   text-align: center;
   width: auto;
   margin: 20px auto auto auto;
-  padding: 0 10px 0 10px;
+  padding: 0 5px 0 5px;
 }
 
 .serviceSubtitle{
@@ -75,17 +75,27 @@ h3.serviceTitle {
 .Services{
   width: fit-content;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Services > .Service {
+  flex: 33.3333333%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.Service{
+  margin-bottom: 10px;
 }
 
 .Service div.ServiceWrapper{
+  width: 100%;
   background-color: #eaebff;
   cursor: pointer;
   text-align: center;
   border-radius: 20px;
   border: #494949 4px solid;
-  margin-top: 1vh;
-  margin-right:0;
-  margin-left: 0;
 }
 
 .Service h3.mainTitle {

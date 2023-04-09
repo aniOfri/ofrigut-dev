@@ -1,0 +1,12 @@
+button.backButton {
+    border-radius: 8px;
+    border: 3px solid #242424;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-family: Roboto;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #dfdfdf;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }

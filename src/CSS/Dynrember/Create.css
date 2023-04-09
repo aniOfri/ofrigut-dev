@@ -1,0 +1,78 @@
+.fileBrowse::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.fileUploader{
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fileBrowse::before {
+    content: 'Select some files';
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.TextInput{
+    width:100px;
+}
+
+.preview{
+    display: inline-block;
+    margin-left:10px
+  }
+
+.mainDiv Button, input{
+    margin-bottom: 20px;
+}
+
+.uploader{
+    width:50px
+}
+
+.preview button{
+    width:70px;
+    height:30px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.preview img{
+    margin-top: 1px
+}
+
+#goBack{
+    padding: 10px 0 0 10px;
+    position: absolute;
+    left:0;
+    top:0;
+  }
+  
+.createDynrember{
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.createDynrember button.createPageButton {
+    margin-bottom: 3vh;
+    border-radius: 8px;
+    border: 3px solid #242424;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-family: Roboto;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #dfdfdf;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }

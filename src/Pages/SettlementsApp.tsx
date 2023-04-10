@@ -13,6 +13,7 @@ import { checkCookies, createCookies } from './Settlements/modules/Cookies';
 export default function Settlements() {
   useEffect(() =>{
     document.title = "ofrigut.dev | settlements"
+    document.body.style.overflow = "hidden";
   });
 
   if (checkCookies())

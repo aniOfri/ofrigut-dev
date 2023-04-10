@@ -14,6 +14,7 @@ function Countries() {
 
   useEffect(() =>{
     document.title = "ofrigut.dev | countries"
+    document.body.style.overflow = "hidden";
   });
 
   if (checkCookies())

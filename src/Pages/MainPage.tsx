@@ -19,6 +19,7 @@ export default function MainPage() {
   
   useEffect(() =>{
     document.title = "ofrigut.dev | main page"
+    document.body.style.overflow = "auto";
 
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {

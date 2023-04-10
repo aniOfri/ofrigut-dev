@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import "../../CSS/EarTrainer/Soundplayer.css"
 import Score from "./Score";
-import {Audio, Intervals} from "../../Tools/EarTrainer/Helper"
+import {Audio, Intervals} from "./Helper"
 
 
 // Return a random interval in the range of *variety

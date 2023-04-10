@@ -17,7 +17,7 @@ function getWindowDimensions() {
     };
   }
   
-function Game() {
+function Game(props) {
     const seedrandom = require('seedrandom');
     const dims = getWindowDimensions();
     const [correctPlay] = useSound(correct);
@@ -200,8 +200,9 @@ function Game() {
     }
     if (!loaded){
         jsx = (<div>
-            <input type="file" className="fileBrowse" accept=".dyn"
+            <input style={{cursor: "pointer", marginTop: "150px"}} type="file" className="fileBrowse" accept=".dyn"
         onChange={OnLoad}/>
+            <h2 className="noFile" dir="rtl" style={{cursor: "pointer", marginTop: "150px", color: "#d8d8d8"}} onClick={()=> {props.setPage(1)}}>אין קובץ? לחץ כאן!</h2>
         </div>)
     }
     else{

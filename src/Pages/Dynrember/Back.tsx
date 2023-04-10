@@ -1,6 +1,6 @@
 import '../../CSS/Dynrember/Back.css'
 
-function Back(props) {
+function Back(props: any) {
   return (
     <div id="goBack">
         <button className="backButton" onClick={() => props.setPage(0)}>

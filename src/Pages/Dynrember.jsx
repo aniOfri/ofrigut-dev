@@ -20,7 +20,7 @@ function Dynrember() {
       jsx = (
         <div className="dynremberWrapper">
           <div>
-            <h1 className="dynremberTitle">דינרמבר - משחק זכרון</h1>
+            <h1 className="dynremberTitle">דינרמבר</h1>
           </div>
           <div className="buttons">
             <button className="menuOption" onClick={() => setPage(1)}>
@@ -44,7 +44,7 @@ function Dynrember() {
       jsx = (
         <div>
         <Back setPage={setPage}/>
-        <Game/>
+        <Game setPage={setPage}/>
       </div>
       )
       break;

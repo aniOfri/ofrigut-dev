@@ -2,7 +2,7 @@ import "../../CSS/EarTrainer/Settings.css"
 import Slider from '@mui/material/Slider';
 import Radio from '@mui/material/Radio';
 import Checkbox from '@mui/material/Checkbox';
-import {Intervals, MidiNumbers} from "../../Tools/EarTrainer/Helper"
+import {Intervals, MidiNumbers} from "./Helper"
 
 function intervalName(e: number){
     let intervals = Intervals;

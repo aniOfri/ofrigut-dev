@@ -6,6 +6,10 @@
   height: 100%;
   text-align: center;
   background-color: #242424;
+  opacity: 1;
+  background-image:  radial-gradient(#909090 2px, transparent 2px), radial-gradient(#909090 2px, #242424 2px);
+  background-size: 80px 80px;
+  background-position: 0 0,40px 40px;
 }
 
 .buttons {

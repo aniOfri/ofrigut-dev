@@ -29,14 +29,13 @@ export default function MainPage() {
 
   const isMobile = widthSize <= 1000;
   const serviceSize: CSS.Properties = {
-    width: isMobile ? "fit-content" : "50%",
+    width: isMobile ? "fit-content" : "30%",
     transform: isMobile ? "scale(0.95)" : "scale(1)"
   };
 
   return (
         <div className="MainPage">
-          <h1 className="mainTitle">welcome to ofrigut.dev</h1>
-          <h2 className="mainSubtitle">my projects:</h2>
+          <h1 className="mainTitle">ofrigut.dev</h1>
           <div className="Services" style={serviceSize}>
             <a className="Service"  href="/eartraining">
               <div className="ServiceWrapper" id="EarTrainer">

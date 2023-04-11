@@ -11,11 +11,11 @@
 }
 
 h1.mainTitle{
-  font-size: 5vh;
+  position:fixed;
+  font-size: 3vh;
   color: #0f0f0f;
-  margin-top: 10vh;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: 20px;
+  margin-right: auto;
   width: fit-content ;
 }
 
@@ -37,7 +37,7 @@ h3.serviceTitle {
   font-size: 4vmin;
   justify-content: center;
   text-align: center;
-  margin: 20px auto auto auto;
+  margin: 10px auto auto auto;
   padding: 0 5px 0 5px;
 }
 
@@ -61,13 +61,11 @@ h3.serviceTitle {
 
 .Services{
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3vh;
 }
 
 .Services > .Service {
-  flex: 33.3333333%;
-  margin: 10px 5px 10px 5px;
+  margin: 20vh 5px 10px 5px;
 }
 
 .Service{

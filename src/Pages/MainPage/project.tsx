@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import {useState, useEffect} from 'react';
-import TryIcon from '@mui/icons-material/Try';
+import PlayCircleTwoToneIcon from '@mui/icons-material/PlayCircleTwoTone';
 
 function Project(props: any) {
     const hrefLink = props.hrefLink;
@@ -24,7 +24,7 @@ function Project(props: any) {
                     <div className="Play">
                         <h3>Play: </h3>
                         <a href={hrefLink}>
-                            <TryIcon color="primary"  sx={{ fontSize: 50 }} />
+                            <PlayCircleTwoToneIcon sx={{ fontSize: 35, color: 'black' }} />
                         </a>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export default function Projects() {
       };
     }, []);
 
-    const widthCss = windowSize.innerWidth > 500 ? "35%" : "fit-content";
+    const widthCss = windowSize.innerWidth > 500 ? "35%" : "95%";
     const projectsStyle = css`
     margin-top: 5vh;
     margin-bottom: 5vh;

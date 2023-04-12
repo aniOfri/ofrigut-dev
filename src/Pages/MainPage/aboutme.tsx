@@ -44,7 +44,7 @@ const aboutMeStyle = css`
 export default function AboutMe(){
     return (
         <div id="aboutme" css={aboutMeStyle} className="aboutMe">
-        <h1 className="mainSubtitle">🔹 About me 🔹</h1>
+        <h1 className="mainSubtitle">About me</h1>
         <p>
           Hi. I'm Ofri Gutman. 👋😄
           A passionate, self-taught full-stack and software developer and a designer, based in Israel. 📍

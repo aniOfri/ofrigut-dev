@@ -53,7 +53,7 @@ export default function Projects() {
       };
     }, []);
 
-    const widthCss = windowSize.innerWidth > 500 ? "35%" : "95%";
+    const widthCss = windowSize.innerWidth > 1000 ? "35%" : "95%";
     const projectsStyle = css`
     margin-top: 5vh;
     margin-bottom: 5vh;

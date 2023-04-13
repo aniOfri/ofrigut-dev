@@ -102,7 +102,7 @@ export default function Projects() {
 
     return (
         <div id="projects" css={projectsStyle} className="Projects">
-            <h1 className="mainSubtitle">Projects</h1>
+            <h1 className="mainSubtitle">Projects 👨‍💻</h1>
             <Project hrefLink="/eartraining"
                 name="👂 Interval Training"
                 information="A tool which helps you train your musical intervals detection skills"

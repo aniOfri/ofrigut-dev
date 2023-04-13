@@ -18,7 +18,9 @@ import CSSLogo from '../../Assets/css-logo.png';
 import PSLogo from '../../Assets/PS-Logo.png';
 import PRLogo from '../../Assets/PR-Logo.png';
 import AELogo from '../../Assets/AE-logo.png';
-import OfficeLogo from '../../Assets/office-logo.png';
+import PowerPointLogo from '../../Assets/powerpoint-logo.png';
+import ExcelLogo from '../../Assets/excel-logo.png';
+import WordLogo from '../../Assets/word-logo.png';
 import SQLLogo from '../../Assets/sql-logo.png';
 
 
@@ -26,13 +28,13 @@ const aboutMeStyle = css`
     margin: auto;
     height: fit-content;
     width: fit-content;
-    margin-top: 10vh;
+    margin-top: 6vh;
     margin-bottom: 3vh;
       
     p{
-    width: 60%;
-    margin:auto;
-    padding: 5px 10px 5px 10px;
+      width: 100%;
+      margin:auto;
+      padding: 5px 10px 5px 10px;
     }
 
     .aboutMeImgs{
@@ -51,8 +53,9 @@ export default function AboutMe(){
         <div id="aboutme" css={aboutMeStyle} className="aboutMe">
         <h1 className="mainSubtitle">About me 👋😄</h1>
         <p>
-          Hi. I'm Ofri Gutman. 
-          A passionate, self-taught Full-Stack and software developer, Designer,  Music lover and a Rubik's cube enthusiast, based in Israel. 📍
+          Hi. I'm Ofri Gutman. <br/>
+          A passionate, self-taught <br/> 
+          Full-Stack and software developer, Designer, <br/>  Music lover and a Rubik's cube enthusiast,<br/>  based in The Haifa Area, Israel. 📍
         </p>
         <div className="aboutMeImgs">
           <img alt="" title="Python" src={PythonLogo} />
@@ -69,7 +72,9 @@ export default function AboutMe(){
           <img alt="" title="Linux" src={LinuxLogo} />
           <img alt="" title="Git" src={GitLogo} />
           <img alt="" title="SQL" src={SQLLogo} />
-          <img alt="" title="Office" src={OfficeLogo} />
+          <img alt="" title="PowerPoint" src={PowerPointLogo} />
+          <img alt="" title="Excel" src={ExcelLogo} />
+          <img alt="" title="Word" src={WordLogo} />
           <img alt="" title="Photoshop" src={PSLogo} />
           <img alt="" title="Premiere Pro" src={PRLogo} />
           <img alt="" title="After Effects" src={AELogo} />

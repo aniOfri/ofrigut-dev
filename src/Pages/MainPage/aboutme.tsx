@@ -17,6 +17,9 @@ import HTMLLogo from '../../Assets/html-logo.svg';
 import CSSLogo from '../../Assets/css-logo.png';
 import PSLogo from '../../Assets/PS-Logo.png';
 import PRLogo from '../../Assets/PR-Logo.png';
+import AELogo from '../../Assets/AE-logo.png';
+import OfficeLogo from '../../Assets/office-logo.png';
+import SQLLogo from '../../Assets/sql-logo.png';
 
 
 const aboutMeStyle = css`
@@ -65,8 +68,11 @@ export default function AboutMe(){
           <img alt="" title="Arduino" src={ArduinoLogo} />
           <img alt="" title="Linux" src={LinuxLogo} />
           <img alt="" title="Git" src={GitLogo} />
+          <img alt="" title="SQL" src={SQLLogo} />
+          <img alt="" title="Office" src={OfficeLogo} />
           <img alt="" title="Photoshop" src={PSLogo} />
           <img alt="" title="Premiere Pro" src={PRLogo} />
+          <img alt="" title="After Effects" src={AELogo} />
         </div>
       </div>
     )

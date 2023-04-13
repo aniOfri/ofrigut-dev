@@ -22,7 +22,7 @@ function Project(props: any) {
                         </div>
                     </div>
                     <div className="Play">
-                        <h3>Play: </h3>
+                        <h3>Play</h3>
                         <a href={hrefLink}>
                             <PlayCircleTwoToneIcon sx={{ fontSize: 35, color: 'black' }} />
                         </a>
@@ -53,7 +53,7 @@ export default function Projects() {
       };
     }, []);
 
-    const widthCss = windowSize.innerWidth > 1000 ? "35%" : "95%";
+    const widthCss = windowSize.innerWidth > 1000 ? "35%" : "90%";
     const projectsStyle = css`
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -75,19 +75,19 @@ export default function Projects() {
             }
             
             .projectContent{
-                margin-left: 10px;
-                margin-right: 20px;
                 display: flex;
 
                 h3 {
                     font-size: 2vh;
                     font-weight: lighter;
+                    width: 90%;
                 }
-
+                
                 .Play{
                     margin-left: auto;
 
                     h3{
+                        margin-bottom: 2px;
                         text-align: center;
                     }
                 }

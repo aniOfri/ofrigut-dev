@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import {useState, useEffect} from 'react';
-import PlayCircleTwoToneIcon from '@mui/icons-material/PlayCircleTwoTone';
+import { useState, useEffect } from 'react';
+import Button from '@mui/material/Button';
 
 function Project(props: any) {
     const hrefLink = props.hrefLink;
@@ -22,9 +22,8 @@ function Project(props: any) {
                         </div>
                     </div>
                     <div className="Play">
-                        <h3>Play</h3>
                         <a href={hrefLink}>
-                            <PlayCircleTwoToneIcon sx={{ fontSize: 35, color: 'black' }} />
+                            <Button className="Button" variant="contained" size="small">Live Demo</Button>
                         </a>
                     </div>
                 </div>
@@ -34,23 +33,23 @@ function Project(props: any) {
 }
 
 function getWindowSize() {
-    const {innerWidth, innerHeight} = window;
-    return {innerWidth, innerHeight};
-  }
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+}
 
 export default function Projects() {
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
     useEffect(() => {
-      function handleWindowResize() {
-        setWindowSize(getWindowSize());
-      }
-  
-      window.addEventListener('resize', handleWindowResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleWindowResize);
-      };
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
     }, []);
 
     const widthCss = windowSize.innerWidth > 1000 ? "35%" : "90%";
@@ -78,17 +77,18 @@ export default function Projects() {
                 display: flex;
 
                 h3 {
+                    width: 30vmax;
                     font-size: 2vh;
                     font-weight: lighter;
-                    width: 90%;
                 }
                 
                 .Play{
                     margin-left: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
 
-                    h3{
-                        margin-bottom: 2px;
-                        text-align: center;
+                    .Button{
+                        background-color: grey
                     }
                 }
             }

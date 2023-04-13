@@ -34,9 +34,10 @@ const aboutMeStyle = css`
 
     .aboutMeImgs{
         margin-top: 2vh;
-        display: inline-flex;
+        display: inline-block;
         img{
-            justify-content: flex-start;
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
             height: 2.5vh;
         }
     }
@@ -59,7 +60,7 @@ export default function AboutMe(){
           <img alt="" title="React" src={ReactLogo} />
           <img alt="" title="Node JS" src={NodeJsLogo} />
           <img alt="" title="C#" src={CSharpLogo} />
-          <img alt="" title="C" src={CLogo} />
+          <img alt="" title="C" src={CLogo} /> <br/>
           <img alt="" title="Unity" src={UnityLogo} />
           <img alt="" title="Arduino" src={ArduinoLogo} />
           <img alt="" title="Linux" src={LinuxLogo} />

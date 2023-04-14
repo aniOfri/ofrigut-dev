@@ -25,16 +25,17 @@ import SQLLogo from '../../Assets/sql-logo.png';
 
 
 const aboutMeStyle = css`
-    margin: auto;
-    height: fit-content;
-    width: fit-content;
-    margin-top: 6vh;
-    margin-bottom: 3vh;
-      
+    width: 100%;
+    margin: 0;
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    
     p{
+      font-size: 20px;
       width: 100%;
-      margin:auto;
-      padding: 5px 10px 5px 10px;
     }
 
     .aboutMeImgs{
@@ -43,42 +44,44 @@ const aboutMeStyle = css`
         img{
             margin-left: 0.5vw;
             margin-right: 0.5vw;
-            height: 2.5vh;
+            height: 3vh;
         }
     }
 `
 
-export default function AboutMe(){
-    return (
-        <div id="aboutme" css={aboutMeStyle} className="aboutMe">
-        <h1 className="mainSubtitle">About me 👋😄</h1>
-        <p>
-          Hi. I'm Ofri Gutman. <br/>
-          A passionate, self-taught <br/> 
-          Full-Stack and software developer, Designer, <br/>  Music lover and a Rubik's cube enthusiast,<br/>  based in The Haifa Area, Israel. 📍
-        </p>
-        <div className="aboutMeImgs">
-          <img alt="" title="Python" src={PythonLogo} />
-          <img alt="" title="HTML5" src={HTMLLogo} />
-          <img alt="" title="CSS" src={CSSLogo} />
-          <img alt="" title="JavaScript" src={JSLogo} />
-          <img alt="" title="TyepScript" src={TSLogo} />
-          <img alt="" title="React" src={ReactLogo} />
-          <img alt="" title="Node JS" src={NodeJsLogo} />
-          <img alt="" title="C#" src={CSharpLogo} />
-          <img alt="" title="C" src={CLogo} /> <br/>
-          <img alt="" title="Unity" src={UnityLogo} />
-          <img alt="" title="Arduino" src={ArduinoLogo} />
-          <img alt="" title="Linux" src={LinuxLogo} />
-          <img alt="" title="Git" src={GitLogo} />
-          <img alt="" title="SQL" src={SQLLogo} />
-          <img alt="" title="PowerPoint" src={PowerPointLogo} />
-          <img alt="" title="Excel" src={ExcelLogo} />
-          <img alt="" title="Word" src={WordLogo} />
-          <img alt="" title="Photoshop" src={PSLogo} />
-          <img alt="" title="Premiere Pro" src={PRLogo} />
-          <img alt="" title="After Effects" src={AELogo} />
-        </div>
+export default function AboutMe() {
+  return (
+    <div id="aboutme" css={aboutMeStyle} className="aboutMe">
+      <h1 className="mainSubtitle">About me 👋😄</h1>
+      <p>
+        Hey there! I'm Ofri Gutman. <br />
+        A passionate self-taught Full-Stack developer, Designer, <br />
+        Music lover as a listener and a piano player and puzzle enthusiast <br />
+        such as Rubik's cubes. based in The Haifa Area, Israel.  <br />
+         Let's collaborate and bring innovative projects to life! 
+      </p>
+      <div className="aboutMeImgs">
+        <img alt="" title="Python" src={PythonLogo} />
+        <img alt="" title="HTML5" src={HTMLLogo} />
+        <img alt="" title="CSS" src={CSSLogo} />
+        <img alt="" title="JavaScript" src={JSLogo} />
+        <img alt="" title="TyepScript" src={TSLogo} />
+        <img alt="" title="React" src={ReactLogo} />
+        <img alt="" title="Node JS" src={NodeJsLogo} />
+        <img alt="" title="C#" src={CSharpLogo} />
+        <img alt="" title="C" src={CLogo} /> <br />
+        <img alt="" title="Unity" src={UnityLogo} />
+        <img alt="" title="Arduino" src={ArduinoLogo} />
+        <img alt="" title="Linux" src={LinuxLogo} />
+        <img alt="" title="Git" src={GitLogo} />
+        <img alt="" title="SQL" src={SQLLogo} />
+        <img alt="" title="PowerPoint" src={PowerPointLogo} />
+        <img alt="" title="Excel" src={ExcelLogo} />
+        <img alt="" title="Word" src={WordLogo} />
+        <img alt="" title="Photoshop" src={PSLogo} />
+        <img alt="" title="Premiere Pro" src={PRLogo} />
+        <img alt="" title="After Effects" src={AELogo} />
       </div>
-    )
+    </div>
+  )
 }

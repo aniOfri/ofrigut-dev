@@ -8,7 +8,6 @@ button.buttonText{
   border-radius: 8px;
   padding: 0 15px 0 15px;
   font-size: 1em;
-  font-family: Roboto;
   font-weight: 500;
   background-color: #dfdfdf;
   cursor: pointer;
@@ -48,7 +47,6 @@ div.gameWrapper{
   width:  fit-content;
   border-radius: 8px;
   border: 3px solid #242424;
-  font-family: Roboto;
   font-weight: 500;
   background-color: white;
   cursor: pointer;

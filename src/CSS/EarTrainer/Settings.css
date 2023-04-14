@@ -17,7 +17,6 @@ div div.Setting h1{
  
 h1.SettingTitle{
     font-size: 4vh;
-    font-family: Roboto;
     color: #2c2d2e;
     text-align:center;
     margin-bottom: 10px
@@ -25,7 +24,6 @@ h1.SettingTitle{
 
 h1.Info{
     font-size: 2vh;
-    font-family: Roboto;
     color: #2c2d2e;
     width:fit-content;
 }

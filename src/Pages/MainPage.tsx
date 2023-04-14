@@ -6,16 +6,17 @@ import Projects from "./MainPage/project";
 import Socials from "./MainPage/socials";
 
 const styledApp = css`
+    font-family: 'Varela Round', sans-serif;
     scroll-behavior: smooth;
     position:absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     text-align: center;
-    background-size: 48px 84px;
-    background-position: 0 0, 0 0, 24px 42px, 24px 42px, 0 0, 24px 42px;
-    font-family: 'Roboto', sans-serif;
+    background-color: #E7E7E7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     .mainSubtitle{
         margin: auto;
@@ -23,14 +24,20 @@ const styledApp = css`
       }
     
     h1{
-      color: #212121;
+      color: #010413;
       width: fit-content
+    }
+
+    .content{
+      flex: 1
     }
     
     .mainNavbar {
       position:fixed;
+      z-index: 1
+      ;
       display: flex;
-      background-color: #f8f8f8bc;
+      background-color: #e7e7e76a;
       width: 100%;
       height: 3vh;
       
@@ -41,27 +48,64 @@ const styledApp = css`
       .mainTitle{
         margin: auto auto auto 10px;
       }
+
+      .navigation{
+        display: inline-flex;
+        margin: auto 10px auto auto;
+
+        .page{
+          margin-left : 5px;
+          margin-right : 5px;
+        }
+      }
     }
 `;
 
-export default function MainPage() {
+export default function MainPage(props: any) {
+  const page = props.page;
+
   useEffect(() => {
-    document.title = "ofrigut.dev | main page";
+    switch(page){
+      default:
+        break;
+      case "0":
+        document.title = "ofrigut.dev | about me";
+        break;
+      case "1":
+        document.title = "ofrigut.dev | projects";
+        break;
+    }
+
     document.body.style.overflow = "auto";
   });
 
-
+  let content;
+  switch(page){
+    default:
+      break;
+    case "0":
+      content = <AboutMe/>
+      break;
+    case "1":
+      content = <Projects/>
+      break;
+  }
 
   return (
     <div css={styledApp} className="MainPage">
       <div className="mainNavbar">
         <h1 className="mainTitle">OfriGut.dev</h1>
+        <div className="navigation">
+          <a href="/"><h1 className="page">About Me</h1></a>
+          <a href="/projects"><h1 className="page">Projects</h1></a>
+        </div>
       </div>
-      <AboutMe />
-      <hr />
-      <Projects />
-      <hr />
-      <Socials />
+      <div className="content">
+        {content}
+      </div>
+      <footer>
+        <Socials />
+      </footer>
     </div>
   );
 }

@@ -6,7 +6,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function Socials(){
 
     const styleSocials = css`
-        margin-bottom: 5px;
         a{
             margin-left: 5px;
             margin-right: 5px;
@@ -14,6 +13,7 @@ export default function Socials(){
     `
     return (
         <div id="socials" css={styleSocials}>
+            <hr />
             <a href="mailto:ofri.gutman@outlook.co.il"><EmailIcon/></a>
             <a href="https://github.com/aniOfri" target="_blank" rel="noopener noreferrer"><GitHubIcon/></a>
         </div>

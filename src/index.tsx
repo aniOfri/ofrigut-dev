@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import MainPage from "./Pages/MainPage";
+import Projects from "./Pages/MainPage/project";
 import EarTrainer from "./Pages/EarTrainer";
 import NotFound from "./Pages/NotFound";
 import Settlements from "./Pages/SettlementsApp";
@@ -13,7 +14,11 @@ import Dynrember from "./Pages/Dynrember";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />,
+    element: <MainPage page="0"/>,
+  },
+  {
+    path: "/projects",
+    element: <MainPage page="1" />,
   },
   {
     path: "/eartraining",

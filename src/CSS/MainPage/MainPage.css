@@ -33,7 +33,6 @@ h3.serviceTitle {
   align-items: center;
   color: #0f0f0f;
   fill: currentcolor;
-  font-family: Roboto;
   font-size: 4vmin;
   justify-content: center;
   text-align: center;
@@ -49,7 +48,6 @@ h3.serviceTitle {
   align-items: center;
   color: #0f0f0f;
   fill: currentcolor;
-  font-family: Roboto;
   font-size: 2.25vmin;
   font-weight: lighter;
   letter-spacing: .25px;

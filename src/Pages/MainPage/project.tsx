@@ -79,7 +79,7 @@ export default function Projects() {
                 h3 {
                     width: 30vmax;
                     font-size: 2vh;
-                    font-weight: lighter;
+                    font-weight: normal;
                 }
                 
                 .Play{

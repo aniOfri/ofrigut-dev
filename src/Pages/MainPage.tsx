@@ -16,7 +16,7 @@ const styledApp = css`
     background-color: #E7E7E7;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
 
     .mainSubtitle{
         margin: auto;
@@ -34,8 +34,7 @@ const styledApp = css`
     
     .mainNavbar {
       position:fixed;
-      z-index: 1
-      ;
+      z-index: 1;
       display: flex;
       background-color: #e7e7e76a;
       width: 100%;
